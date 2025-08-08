@@ -20,7 +20,7 @@ El index comienza en 0, para cambiar usar index
 
 pd.Series([30, 40], index=['2012 Sales', '2013 Sales'])
 
-### Lectura de archivos
+### Lectura
 
 pd.read_csv()
 
