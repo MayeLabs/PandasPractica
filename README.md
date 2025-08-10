@@ -67,3 +67,24 @@ reviews = pd.read_csv("../input/archivo.csv")
 reviews
 reviews.country
 reviews['country']
+
+## Indexing con pandas
+
+El operador indexing y atributo de seleccion, a traves de pandas, es *loc* y *iloc*
+.loc  -> Seleccion por etiqueta, no por posicion numerica
+         *lo que importa es el valor del índice de datos, no su posición*
+.iloc -> Seleccion por posicion, el indice no se incluye
+
+df.iloc[fila, columna]
+df.loc[fila, columna]
+
+### .iloc vs .loc
+
+> ***iloc*** utiliza el esquema de indexación de la biblioteca estándar de Python, donde se incluye el primer elemento del rango y ***se excluye el último.*** Por lo tanto, 0:10 seleccionará las entradas 0,...,9. 
+Por su parte, ***loc*** ***indexa de forma inclusiva.*** Por lo tanto, 0:10 seleccionará las entradas 0,...,10.
+
+
+![loc VS iloc](/imgs/locVSiloc.jpg)
+
+
+
