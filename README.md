@@ -20,6 +20,13 @@ El index comienza en 0, para cambiar usar index
 
 pd.Series([30, 40], index=['2012 Sales', '2013 Sales'])
 
+Atributo descriptivo
+
+Usar name
+
+ingredients = pd.Series(['4 cups','1 cup','2 large', '1 can'], index=['Flour','Milk', 'Eggs', 'Spam'], name='Dinner')
+
+
 ### Lectura
 
 pd.read_csv()
@@ -39,3 +46,24 @@ print("Path to dataset files:", path)
 y concatenar la direccion del archivo y el nombre
 cv_path = os.path.join(path,"winemag-data-130k-v2.csv")
 
+### Escritura
+
+pd.to_csv("nombre_archivo")
+
+
+## Indexing, Selecting & Assigning
+
+### Accesos nativos
+
+Python de forma nativa provee buenas maneras de indexar la data.
+
+"In Python, we can access the property of an object by accessing it as an attribute"
+
+Para acceder a un diccionario en python usar []
+
+Ejemplo:
+reviews = pd.read_csv("../input/archivo.csv")
+
+reviews
+reviews.country
+reviews['country']
