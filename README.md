@@ -68,7 +68,7 @@ reviews
 reviews.country
 reviews['country']
 
-## Indexing con pandas
+### Indexing con pandas
 
 El operador indexing y atributo de seleccion, a traves de pandas, es *loc* y *iloc*
 .loc  -> Seleccion por etiqueta, no por posicion numerica
@@ -78,7 +78,7 @@ El operador indexing y atributo de seleccion, a traves de pandas, es *loc* y *il
 df.iloc[fila, columna]
 df.loc[fila, columna]
 
-### .iloc vs .loc
+#### .iloc vs .loc
 
 > ***iloc*** utiliza el esquema de indexación de la biblioteca estándar de Python, donde se incluye el primer elemento del rango y ***se excluye el último.*** Por lo tanto, 0:10 seleccionará las entradas 0,...,9. 
 Por su parte, ***loc*** ***indexa de forma inclusiva.*** Por lo tanto, 0:10 seleccionará las entradas 0,...,10.
@@ -86,5 +86,19 @@ Por su parte, ***loc*** ***indexa de forma inclusiva.*** Por lo tanto, 0:10 sele
 
 ![loc VS iloc](/imgs/locVSiloc.jpg)
 
+## Manipulando index
+
+df.set_index("nombre_columna")
+
+> cambia el indice de DataFrame usando una columna existente.
 
 
+## Condicionales seleccionales
+
+Usa las propiedades de la estructura del DataFrame, basado en condiciones
+
+df.country == 'Italy'
+df.loc[reviews.country == 'Italy']
+
+.isin():  df.nombre_columna.isin([1 , 2])
+.isnull(): df.nombre_columna.isnull()
