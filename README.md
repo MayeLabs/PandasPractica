@@ -101,4 +101,22 @@ df.country == 'Italy'
 df.loc[reviews.country == 'Italy']
 
 .isin():  df.nombre_columna.isin([1 , 2])
-.isnull(): df.nombre_columna.isnull()
+.isnull(): df.nombre_columna.isnull()\
+
+## Summary Functions and Maps
+
+No todos los datos vienen en formatos sencillos para almacenar en un DF, por ello es necesario el maps
+
+### Some sommary functions
+* describe()
+* mean()
+* unique()
+* value_counts()
+
+### Maps
+ Hay dos metodos:
+ * map(): One by one, simple and efficient, only works works on a **single column (Series)**
+ * apply():  **level up**, A single column (Series), Multiple columns (DataFrame), Rows and Columns (axis control) 
+
+``` python
+```
