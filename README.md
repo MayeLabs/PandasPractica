@@ -118,5 +118,57 @@ No todos los datos vienen en formatos sencillos para almacenar en un DF, por ell
  * map(): One by one, simple and efficient, only works works on a **single column (Series)**
  * apply():  **level up**, A single column (Series), Multiple columns (DataFrame), Rows and Columns (axis control) 
 
-``` python
-```
+Ejemplo:
+
+* map()
+
+Series (columna)
+[1, 2, 3, 4]
+
+map(función)
+↓   ↓   ↓   ↓
+[func(1), func(2), func(3), func(4)]
+
+* apply()
+
+**Series**
+
+Series (columna)
+[1, 2, 3, 4]
+
+apply(función)
+↓   ↓   ↓   ↓
+[func(1), func(2), func(3), func(4)]
+
+**DataFrame**
+
+*por columnas (axis=0)*
+
+DataFrame
+A   B
+1  10
+2  20
+3  30
+
+apply(función, axis=0)
+↓             ↓
+func(col A)   func(col B)
+
+Resultado:
+A → función aplicada a [1,2,3]
+B → función aplicada a [10,20,30]
+
+
+*Por filas (axis=1)*
+
+DataFrame
+A   B
+1  10
+2  20
+3  30
+
+apply(función, axis=1)
+↓
+func([1,10]) → resultado fila 1
+func([2,20]) → resultado fila 2
+func([3,30]) → resultado fila 3
